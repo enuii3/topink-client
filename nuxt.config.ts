@@ -8,8 +8,8 @@ export default defineNuxtConfig({
   imports: {
     dirs: ["features"],
   },
-  // css: ["vuetify/lib/styles/main.sass", "mdi/css/materialdesignicons.min.css"],
   build: {
     transpile: ["vuetify"],
   },
+  plugins: [{ src: "@/plugins/aos", ssr: false, mode: "client" }],
 });
