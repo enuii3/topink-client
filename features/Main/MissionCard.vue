@@ -4,10 +4,10 @@ import { mission } from "~/constants/constant";
 
 <template>
   <div>
-    <div class="ma-9 pa-8 border">
+    <div class="ma-6 pa-6 border">
       <h2 class="text-center">経営理念</h2>
       <v-list>
-        <v-list-item> {{ mission.text }}: {{ mission.value }} </v-list-item>
+        <v-list-item>{{ mission.value }} </v-list-item>
       </v-list>
     </div>
   </div>

@@ -5,7 +5,8 @@
     <v-row justify="center" no-gutters>
       <v-col>
         <div class="text-center">
-          Copyright © 2023 Top ink inc. All Rights Reserved.
+          Copyright © 2023 Top ink inc.
+          <!-- All Rights Reserved. -->
         </div>
       </v-col>
     </v-row>
