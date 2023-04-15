@@ -5,25 +5,19 @@ import { colors } from "~/constants/constant";
 
 <template>
   <v-app-bar flat height="80">
-    <div class="d-flex justify-space-between">
-      <div class="d-flex align-center">
+    <v-row no-gutters class="d-flex justify-space-around">
+      <v-col xs="3" sm="2" md="1" class="d-flex align-center">
         <v-img src="topink.jpg" height="50" width="50" />
 
         <h1 v-for="(str, i) in 'Topink'" :key="i" :style="{ color: colors[i] }">
           {{ str }}
         </h1>
-      </div>
+      </v-col>
 
-      <div>
+      <v-col xs="7" sm="8" md="9" class="d-flex align-center">
         <HeaderMenu />
-      </div>
-    </div>
-
-    <!-- <template v-slot:append>
-      <v-btn>
-        <v-icon> mdi-cart </v-icon>
-      </v-btn>
-    </template> -->
+      </v-col>
+    </v-row>
   </v-app-bar>
 </template>
 
