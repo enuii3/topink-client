@@ -22,11 +22,15 @@ defineProps<Props>();
       <slot />
     </h1>
 
-    <strong
+    <span
       v-else-if="variant === 'header'"
-      :style="{ color: colors[menuIndexNumber] }"
+      :style="{
+        color: colors[menuIndexNumber],
+        'font-size': '12px',
+        'font-weight': 'bold',
+      }"
     >
       <slot />
-    </strong>
+    </span>
   </div>
 </template>

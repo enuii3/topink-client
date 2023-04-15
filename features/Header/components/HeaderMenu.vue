@@ -7,7 +7,7 @@ const bottomHeaderMenu = headerMenu.slice(-3);
 </script>
 
 <template>
-  <v-row no-gutter class="d-flex justify-space-around">
+  <v-row no-gutter class="d-flex justify-space-around align-center">
     <v-col
       cols="10"
       sm="5"
