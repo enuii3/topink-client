@@ -12,11 +12,9 @@ defineProps<Props>();
   <div>
     <h1
       v-if="variant === 'main'"
-      class="pl-4"
       :style="{
-        'border-bottom-width': '10px',
-        'border-bottom-style': 'solid',
-        'border-color': colors[menuIndexNumber],
+        'padding-left': '15px',
+        background: `linear-gradient(transparent 60%, ${colors[menuIndexNumber]} 40%)`,
       }"
     >
       <slot />

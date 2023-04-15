@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { TopInkTitle } from "~~/features/Elements";
+import { TopInkCard } from "~~/features/Elements";
 
 interface Props {
   menuIndexNumber: number;
@@ -19,16 +19,18 @@ const aboutUs = [
 </script>
 
 <template>
-  <div class="pt-10">
-    <div class="ma-10 pa-10 border">
-      <TopInkTitle variant="main" :menu-index-number="menuIndexNumber">
-        会社概要
-      </TopInkTitle>
-      <v-list>
-        <v-list-item v-for="(us, i) in aboutUs" :key="i">
-          {{ us.title }}: {{ us.value }}
-        </v-list-item>
-      </v-list>
-    </div>
-  </div>
+  <TopInkCard :menu-index-number="menuIndexNumber" title="会社概要">
+    <v-list>
+      <v-list-item
+        v-for="(us, i) in aboutUs"
+        :key="i"
+        data-aos="fade-in"
+        data-aos-offset="200"
+        data-aos-delay="200"
+        data-aos-duration="2000"
+      >
+        {{ us.title }}: {{ us.value }}
+      </v-list-item>
+    </v-list>
+  </TopInkCard>
 </template>

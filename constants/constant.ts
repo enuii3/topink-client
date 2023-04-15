@@ -1,4 +1,11 @@
-export const colors = ["green", "blue", "orange", "brown", "yellow", "red"];
+export const colors = [
+  "#009900",
+  "#0000ff",
+  "#ff8000",
+  "#8b4513",
+  "#ffaa00",
+  "#ff0000",
+];
 export const headerMenu = [
   {
     title: "mission",

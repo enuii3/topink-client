@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { TopInkTitle } from "~~/features/Elements";
+import { TopInkCard } from "~~/features/Elements";
 
 interface Props {
   menuIndexNumber: number;
@@ -14,14 +14,16 @@ const mission = {
 </script>
 
 <template>
-  <div>
-    <div class="ma-6 pa-6 border">
-      <TopInkTitle variant="main" :menu-index-number="menuIndexNumber">
-        経営理念
-      </TopInkTitle>
-      <v-list>
-        <v-list-item>{{ mission.value }} </v-list-item>
-      </v-list>
-    </div>
-  </div>
+  <TopInkCard title="経営理念" :menu-index-number="menuIndexNumber">
+    <v-list>
+      <v-list-item
+        data-aos="fade-in"
+        data-aos-offset="400"
+        data-aos-delay="400"
+        data-aos-duration="4000"
+        >{{ mission.value }}
+      </v-list-item>
+    </v-list>
+  </TopInkCard>
 </template>
+<style scoped></style>
