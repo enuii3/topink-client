@@ -7,11 +7,11 @@ const bottomHeaderMenu = headerMenu.slice(-3);
 </script>
 
 <template>
-  <v-row no-gutter class="d-flex justify-space-around align-center">
+  <v-row no-gutter class="d-flex align-center">
     <v-col
-      cols="10"
-      sm="5"
-      class="d-flex justify-space-between"
+      cols="11"
+      sm="6"
+      class="d-flex justify-space-around align-center"
       style="padding: 0"
     >
       <TopInkTitle
@@ -26,9 +26,9 @@ const bottomHeaderMenu = headerMenu.slice(-3);
     </v-col>
 
     <v-col
-      cols="10"
-      sm="5"
-      class="d-flex justify-space-between"
+      cols="11"
+      sm="6"
+      class="d-flex justify-space-around align-center"
       style="padding: 0"
     >
       <TopInkTitle
