@@ -21,11 +21,12 @@ defineProps<Props>();
     >
       <slot />
     </h1>
-    <p
+
+    <strong
       v-else-if="variant === 'header'"
       :style="{ color: colors[menuIndexNumber] }"
     >
       <slot />
-    </p>
+    </strong>
   </div>
 </template>

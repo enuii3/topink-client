@@ -20,16 +20,11 @@ const componentCards = [
 <template>
   <div>
     <TopCard />
-    <!-- <div v-for="(color, i) in colors" :key="i"> -->
     <component
       v-for="(card, i) in componentCards"
       :key="i"
       :is="card"
       :menu-index-number="i"
     />
-    <!-- </div> -->
-    <!-- <MissionCard />
-    <BusinessesCard />
-    <AboutUsCard /> -->
   </div>
 </template>
