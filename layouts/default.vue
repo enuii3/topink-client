@@ -6,11 +6,22 @@ import { Footer } from "~~/features/Footer";
 <template>
   <v-app>
     <Header />
-    <v-main>
-      <slot />
+    <v-main class="vmain-container">
+      <div class="vmain">
+        <slot />
+      </div>
     </v-main>
     <Footer />
   </v-app>
 </template>
 
-<style scoped></style>
+<style scoped>
+.vmain-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.vmain {
+  max-width: 1200px;
+}
+</style>

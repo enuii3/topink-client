@@ -1,11 +1,34 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const gradientMessageColor14 = [
+  "#009900",
+  "#00cc00",
+  "#00ffa2",
+  "#00ffff",
+  "#1199bf",
+  "#0080ff",
+  "#0000ff",
+  "#8800ff",
+  "#ffaa00",
+  "#ff8000",
+  "#8b4513",
+  "#ffcc00",
+  "#ff5500",
+  "#ff0000",
+];
+</script>
 
 <template>
-  <div>
-    <v-img src="topink.jpg">
-      <strong class="top-message">『ミライへ繋げる、まちづくり。』</strong>
-    </v-img>
-  </div>
+  <v-img src="topink-top.jpg">
+    <div class="top-message">
+      <strong style="color: white"> 『</strong>
+      <strong
+        v-for="(str, i) in 'ミライへ繋げる、まちづくり。'"
+        :style="{ color: gradientMessageColor14[i] }"
+        >{{ str }}</strong
+      >
+      <strong style="color: white">』</strong>
+    </div>
+  </v-img>
 </template>
 
 <style scoped>

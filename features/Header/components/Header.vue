@@ -5,9 +5,9 @@ import { colors } from "~/constants/constant";
 
 <template>
   <v-app-bar flat>
-    <v-row no-gutters class="d-flex justify-space-around pt-6">
+    <v-row no-gutters justify="space-around" class="d-flex py-6">
       <v-col cols="4" sm="3" md="2" class="d-flex align-center">
-        <v-img src="topink.jpg" max-height="40" />
+        <v-img src="topink-logo.jpg" max-height="40" />
 
         <h2 v-for="(str, i) in 'Topink'" :key="i" :style="{ color: colors[i] }">
           {{ str }}

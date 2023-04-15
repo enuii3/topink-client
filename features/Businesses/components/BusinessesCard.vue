@@ -4,7 +4,7 @@ import { TopInkTitle } from "~~/features/Elements";
 interface Props {
   menuIndexNumber: number;
 }
-const props = defineProps<Props>();
+defineProps<Props>();
 
 const businesses = [
   {
@@ -44,26 +44,32 @@ const businesses = [
     </div>
 
     <v-row justify="space-around" no-gutters>
-      <v-col cols="11" sm="5" v-for="(business, i) in businesses" :key="i">
-        <!-- <div
-            data-aos="fade-in"
-            data-aos-offset="200"
-            data-aos-delay="50"
-            data-aos-duration="1000"
-            data-aos-mirror="true"
-            data-aos-once="false"
-            data-aos-anchor-placement="top-center"
-          > -->
+      <v-col cols="10" sm="5" v-for="(business, i) in businesses" :key="i">
         <div
           data-aos="fade-in"
-          data-aos-offset="200"
-          data-aos-delay="50"
+          data-aos-offset="100"
+          data-aos-delay="100"
           data-aos-duration="1000"
         >
-          <v-card class="d-flex justify-center w-100 my-2" height="200px">
+          <v-card class="d-flex justify-center w-100 my-4" height="228px">
             <div class="ma-8">
-              <h3 class="mb-2">{{ business.title }}</h3>
-              <p>{{ business.description }}</p>
+              <h3
+                data-aos="fade-in"
+                data-aos-offset="200"
+                data-aos-delay="200"
+                data-aos-duration="2000"
+                class="mb-4"
+              >
+                {{ business.title }}
+              </h3>
+              <p
+                data-aos="fade-in"
+                data-aos-offset="300"
+                data-aos-delay="300"
+                data-aos-duration="3000"
+              >
+                {{ business.description }}
+              </p>
             </div>
           </v-card>
         </div>
