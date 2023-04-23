@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { TopInkTitle } from "~~/features/Elements";
+import { NavBarMenuTextTitle } from "~~/features/Elements";
 
 interface Props {
   menuIndexNumber: number;
@@ -36,11 +36,11 @@ const businesses = [
 </script>
 
 <template>
-  <div class="pt-10">
+  <div id="businesses" class="pt-10">
     <div class="px-10 pb-4">
-      <TopInkTitle variant="main" :menu-index-number="menuIndexNumber"
+      <NavBarMenuTextTitle variant="main" :menu-index-number="menuIndexNumber"
         >事業内容
-      </TopInkTitle>
+      </NavBarMenuTextTitle>
     </div>
 
     <v-row justify="space-around" no-gutters>

@@ -8,7 +8,11 @@ defineProps<Props>();
 </script>
 
 <template>
-  <TopInkCard title="お問い合わせ" :menu-index-number="menuIndexNumber">
+  <TopInkCard
+    id="contact"
+    title="お問い合わせ"
+    :menu-index-number="menuIndexNumber"
+  >
   </TopInkCard>
 </template>
 <style scoped></style>

@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { colors } from "~~/constants/constant";
-import TopInkTitle from "./TopInkTitle.vue";
+import { topInkColors } from "~~/constants/constant";
+import NavBarMenuTextTitle from "./NavBarMenuTextTitle.vue";
 
 interface Props {
   title: string;
@@ -20,12 +20,12 @@ const props = defineProps<Props>();
       'border-radius': '20px',
       'border-width': '2px',
       'border-style': 'solid',
-      'border-color': colors[menuIndexNumber],
+      'border-color': topInkColors[menuIndexNumber],
     }"
   >
-    <TopInkTitle variant="main" :menu-index-number="menuIndexNumber">
+    <NavBarMenuTextTitle variant="main" :menu-index-number="menuIndexNumber">
       {{ title }}
-    </TopInkTitle>
+    </NavBarMenuTextTitle>
     <slot />
   </div>
 </template>
