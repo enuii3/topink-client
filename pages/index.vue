@@ -2,7 +2,7 @@
 import { TopCard } from "~/features/Top";
 import { MissionCard } from "~/features/Mission";
 import { BusinessesCard } from "~/features/Businesses";
-import { NewsCard } from "~/features/News";
+import { OfficeCard } from "~/features/Office";
 import { AboutUsCard } from "~/features/AboutUs";
 import { RecruitCard } from "~/features/Recruit";
 import { ContactCard } from "~/features/Contact";
@@ -10,7 +10,7 @@ import { ContactCard } from "~/features/Contact";
 const componentCards = [
   MissionCard,
   BusinessesCard,
-  NewsCard,
+  OfficeCard,
   AboutUsCard,
   RecruitCard,
   ContactCard,
@@ -21,10 +21,10 @@ const componentCards = [
   <div>
     <TopCard />
     <component
-      v-for="(card, i) in componentCards"
-      :key="i"
+      v-for="(card, index) in componentCards"
+      :key="index"
       :is="card"
-      :menu-index-number="i"
+      :menu-index-number="index"
     />
   </div>
 </template>

@@ -17,7 +17,7 @@ export const headerMenu = [
   },
   {
     title: "aboutUs",
-    text: "私たちについて",
+    text: "私たち",
   },
   {
     title: "office",
@@ -29,6 +29,6 @@ export const headerMenu = [
   },
   {
     title: "contact",
-    text: "お問い合せ",
+    text: "お問合せ",
   },
 ];
