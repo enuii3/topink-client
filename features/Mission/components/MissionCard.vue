@@ -14,7 +14,11 @@ const mission = {
 </script>
 
 <template>
-  <TopInkCard title="経営理念" :menu-index-number="menuIndexNumber">
+  <TopInkCard
+    id="mission"
+    title="経営理念"
+    :menu-index-number="menuIndexNumber"
+  >
     <v-list>
       <v-list-item
         data-aos="fade-in"

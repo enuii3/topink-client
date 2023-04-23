@@ -1,20 +1,21 @@
 <script setup lang="ts">
 import HeaderMenu from "./HeaderMenu.vue";
-import { colors } from "~/constants/constant";
 </script>
 
 <template>
-  <v-app-bar flat>
-    <v-row no-gutters justify="space-around" class="d-flex py-6">
-      <v-col cols="4" sm="3" md="2" class="d-flex align-center">
-        <v-img src="topink-logo.jpg" max-height="40" />
-
-        <h2 v-for="(str, i) in 'Topink'" :key="i" :style="{ color: colors[i] }">
-          {{ str }}
-        </h2>
+  <v-app-bar flat height="auto" class="pa-4">
+    <v-row no-gutters justify-sm="space-around" style="max-width: 1500px">
+      <v-col
+        cols="12"
+        sm="3"
+        class="d-flex justify-start align-center"
+        style="max-width: 220px"
+      >
+        <v-img src="topink-logo.png" max-width="40" />
+        <h3 class="topink-logo-title">TOP INK</h3>
       </v-col>
 
-      <v-col cols="6" sm="7" md="8" class="d-flex align-center">
+      <v-col cols="12" sm="9" class="d-flex justify-start px-4 px-sm-0">
         <HeaderMenu />
       </v-col>
     </v-row>
@@ -24,5 +25,13 @@ import { colors } from "~/constants/constant";
 <style scoped>
 header {
   width: 100%;
+}
+.topink-logo-title {
+  padding-left: 10px;
+}
+
+.v-toolbar__content > * {
+  margin-left: auto;
+  margin-right: auto;
 }
 </style>
