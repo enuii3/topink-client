@@ -1,10 +1,10 @@
-export const colors = [
+export const topInkColors = [
   "#009900",
+  "#ffa500",
   "#0000ff",
-  "#ff8000",
   "#8b4513",
-  "#ffaa00",
   "#ff0000",
+  "#ffd700",
 ];
 export const headerMenu = [
   {
@@ -16,11 +16,11 @@ export const headerMenu = [
     text: "事業紹介",
   },
   {
-    title: "news",
-    text: "お知らせ",
+    title: "aboutUs",
+    text: "私たちについて",
   },
   {
-    title: "aboutUs",
+    title: "office",
     text: "会社情報",
   },
   {
