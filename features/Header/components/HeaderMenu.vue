@@ -7,7 +7,7 @@ const bottomHeaderMenu = headerMenu.slice(-3);
 
 const scrollTo = (index: number) => {
   window.scrollTo({
-    top: 500 * index,
+    top: 500 * (index + 1),
     behavior: "smooth",
   });
 };
@@ -18,7 +18,7 @@ const scrollTo = (index: number) => {
     <v-col
       cols="12"
       sm="6"
-      class="d-flex justify-space-between justify-sm-space-around align-center"
+      class="d-flex justify-space-between justify-sm-space-around align-center my-1"
       style="padding: 0"
     >
       <NavBarMenuTextTitle
@@ -35,14 +35,14 @@ const scrollTo = (index: number) => {
     <v-col
       cols="12"
       sm="6"
-      class="d-flex justify-space-between justify-sm-space-around align-center"
+      class="d-flex justify-space-between justify-sm-space-around align-center my-1"
       style="padding: 0"
     >
       <NavBarMenuTextTitle
-        v-for="(menu, i) in bottomHeaderMenu"
+        v-for="(menu, index) in bottomHeaderMenu"
         width="84px"
-        :menu-index-number="i + 3"
-        :key="i"
+        :menu-index-number="index + 3"
+        :key="index"
         @click="scrollTo(index)"
       >
         <p class="navbar-menu-title">{{ menu.text }}</p>
