@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { NavBarMenuTextTitle } from "~/features/Elements";
-import { headerMenu } from "~/constants/constant";
+import { headerMenus } from "~/constants/constant";
 
-const topHeaderMenu = headerMenu.slice(0, 3);
-const bottomHeaderMenu = headerMenu.slice(-3);
+const topHeaderMenus = headerMenus.slice(0, 3);
+const bottomHeaderMenus = headerMenus.slice(-3);
 
 const scrollTo = (index: number) => {
   window.scrollTo({
@@ -22,10 +22,10 @@ const scrollTo = (index: number) => {
       style="padding: 0"
     >
       <NavBarMenuTextTitle
-        v-for="(menu, index) in topHeaderMenu"
+        v-for="(menu, index) in topHeaderMenus"
         width="84px"
         :key="index"
-        :menu-index-number="index"
+        :color="menu.color"
         @click="scrollTo(index)"
       >
         <p class="navbar-menu-title">{{ menu.text }}</p>
@@ -39,10 +39,10 @@ const scrollTo = (index: number) => {
       style="padding: 0"
     >
       <NavBarMenuTextTitle
-        v-for="(menu, index) in bottomHeaderMenu"
+        v-for="(menu, index) in bottomHeaderMenus"
         width="84px"
-        :menu-index-number="index + 3"
         :key="index"
+        :color="menu.color"
         @click="scrollTo(index)"
       >
         <p class="navbar-menu-title">{{ menu.text }}</p>

@@ -26,7 +26,7 @@ import { Footer } from "~~/features/Footer";
 }
 @media screen and (max-width: 600px) {
   .vmain {
-    margin-top: 80px;
+    margin-top: 40px;
   }
 }
 </style>

@@ -3,7 +3,7 @@ import HeaderMenu from "./HeaderMenu.vue";
 </script>
 
 <template>
-  <v-app-bar flat height="auto" class="pa-4">
+  <v-app-bar flat class="pa-6 pa-sm-4">
     <v-row no-gutters justify-sm="space-around" style="max-width: 1500px">
       <v-col
         cols="12"
