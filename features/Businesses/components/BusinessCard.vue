@@ -88,7 +88,7 @@ p {
   }
 
   p {
-    width: 300px;
+    width: 280px;
     line-height: 20px;
   }
 }
