@@ -25,6 +25,7 @@ defineProps<Props>();
         <v-icon class="pr-4" size="x-large" :color="color">{{ icon }}</v-icon>
 
         <h3
+          style="letter-spacing: 2px"
           data-aos="fade-in"
           data-aos-offset="200"
           data-aos-delay="200"
