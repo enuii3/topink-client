@@ -17,7 +17,7 @@ defineProps<Props>();
     data-aos-delay="200"
     data-aos-duration="2000"
   >
-    <v-col cols="4"
+    <v-col cols="4" class="d-flex justify-center"
       ><v-chip label :color="color" style="width: 100px">
         <p style="margin: 0 auto">
           {{ obj.label }}
