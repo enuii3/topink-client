@@ -1,10 +1,11 @@
 <script setup lang="ts">
 import { TopInkCard } from "~~/features/Elements";
+import { HeaderMenu } from "~~/types/type";
 
 interface Props {
-  menuIndexNumber: number;
+  headerMenu: HeaderMenu;
 }
-const props = defineProps<Props>();
+defineProps<Props>();
 
 const aboutUs = [
   {
@@ -19,7 +20,15 @@ const aboutUs = [
 </script>
 
 <template>
-  <TopInkCard id="office" :menu-index-number="menuIndexNumber" title="会社概要">
+  <!-- <TopInkCard id="office" :menu-index-number="menuIndexNumber" title="会社概要"> -->
+  <TopInkCard
+    bottom-title-width="220px"
+    position-bottom="-50px"
+    :text="headerMenu.text"
+    :title="headerMenu.title"
+    :color="headerMenu.color"
+    :icon="headerMenu.icon"
+  >
     <v-list>
       <v-list-item
         v-for="(us, i) in aboutUs"

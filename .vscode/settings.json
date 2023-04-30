@@ -1,3 +1,4 @@
 {
-  "cSpell.words": ["vuetify"]
+  "cSpell.words": ["vuetify"],
+  "vue.features.codeActions.enable": false
 }

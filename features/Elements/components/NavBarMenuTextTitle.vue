@@ -1,16 +1,14 @@
 <script setup lang="ts">
-import { topInkColors } from "~/constants/constant";
-
 interface Props {
-  menuIndexNumber: number;
   width?: string;
+  color: string;
 }
 defineProps<Props>();
 </script>
 
 <template>
   <div class="d-flex align-center" :style="{ width: width }">
-    <v-icon icon="mdi-chevron-down" :color="topInkColors[menuIndexNumber]" />
+    <v-icon icon="mdi-chevron-down" :color="color" />
     <slot />
   </div>
 </template>
