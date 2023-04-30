@@ -11,8 +11,9 @@ defineProps<Props>();
 
 <template>
   <TopInkCard
-    bottom-title-width="300px"
     position-bottom="-50px"
+    bottom-title-width="300px"
+    bottom-title-opacity="0.2"
     :text="headerMenu.text"
     :title="headerMenu.title"
     :color="headerMenu.color"
