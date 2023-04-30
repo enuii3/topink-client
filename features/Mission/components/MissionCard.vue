@@ -13,6 +13,7 @@ defineProps<Props>();
   <TopInkCard
     text="あなたの人生を、もっと彩る。"
     bottom-title-width="310px"
+    bottom-title-opacity="0.2"
     position-bottom="-50px"
     :title="headerMenu.title"
     :color="headerMenu.color"

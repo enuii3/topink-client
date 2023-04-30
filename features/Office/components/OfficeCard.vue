@@ -22,8 +22,9 @@ const aboutUs = [
 <template>
   <!-- <TopInkCard id="office" :menu-index-number="menuIndexNumber" title="会社概要"> -->
   <TopInkCard
-    bottom-title-width="220px"
     position-bottom="-50px"
+    bottom-title-width="220px"
+    bottom-title-opacity="0.2"
     :text="headerMenu.text"
     :title="headerMenu.title"
     :color="headerMenu.color"

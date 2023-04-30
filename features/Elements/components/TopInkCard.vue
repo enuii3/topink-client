@@ -15,6 +15,7 @@ interface Props extends HeaderMenu {
   positionRight?: string;
   positionBottom?: string;
   bottomTitleWidth: string;
+  bottomTitleOpacity?: string;
 }
 
 defineProps<Props>();
@@ -42,6 +43,7 @@ defineProps<Props>();
           position: 'absolute',
           bottom: positionBottom,
           right: 0,
+          opacity: bottomTitleOpacity,
         }"
       >
         {{ title }}
@@ -78,7 +80,6 @@ defineProps<Props>();
   align-items: center;
   text-transform: capitalize;
 
-  opacity: 0.2;
   mix-blend-mode: darken;
 }
 </style>
