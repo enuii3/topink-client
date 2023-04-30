@@ -16,6 +16,7 @@ interface Props extends HeaderMenu {
   positionBottom?: string;
   bottomTitleWidth: string;
   bottomTitleOpacity?: string;
+  backgroundColor?: string;
 }
 
 defineProps<Props>();
@@ -23,7 +24,12 @@ defineProps<Props>();
 
 <template>
   <!-- <div :id="title" class="ma-5" data-aos="fade-in" data-aos-offset="200" data-aos-delay="200" data-aos-duration="2000" style="position: static" > -->
-  <div class="py-10">
+  <div
+    class="py-10"
+    :style="{
+      background: backgroundColor,
+    }"
+  >
     <div style="position: relative">
       <div :id="title" class="mx-5 mx-sm-7 h-100">
         <div class="title-bar">
@@ -70,6 +76,7 @@ defineProps<Props>();
 }
 
 .background-text {
+  z-index: auto;
   overflow: hidden;
   font-family: "Impact";
   font-style: normal;
