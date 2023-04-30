@@ -58,9 +58,10 @@ const businesses = [
         v-for="(business, index) in businesses"
         :key="index"
         cols="12"
-        md="5"
+        md="6"
       >
         <div
+          class="pa-2"
           data-aos="fade-in"
           data-aos-offset="100"
           data-aos-delay="100"
