@@ -1,26 +1,31 @@
 <script setup lang="ts">
 import { TopInkCard } from "~~/features/Elements";
 import { HeaderMenu } from "~~/types/type";
+import { TopInkListTemplate } from "../../Elements";
 
 interface Props {
   headerMenu: HeaderMenu;
 }
 defineProps<Props>();
 
-const aboutUs = [
+const offices = [
+  { label: "会社名", value: "株式会社TOP INK" },
+  { label: "代表取締役", value: "田島 憲人" },
+  { label: "郵便番号", value: "430-0855" },
   {
-    title: "郵便番号",
-    value: "430-0855",
-  },
-  {
-    title: "住所",
+    label: "本社",
     value: "静岡県 浜松市 南区 楊子町 199-4 Leylandy village D号室",
   },
+  {
+    label: "支店",
+    value: "静岡県 浜松市 南区 楊子町 199-4 Leylandy village D号室",
+  },
+  { label: "設立年月日", value: "2023年 4月" },
+  { label: "資本金", value: "50万" },
 ];
 </script>
 
 <template>
-  <!-- <TopInkCard id="office" :menu-index-number="menuIndexNumber" title="会社概要"> -->
   <TopInkCard
     position-bottom="-50px"
     bottom-title-width="220px"
@@ -30,17 +35,8 @@ const aboutUs = [
     :color="headerMenu.color"
     :icon="headerMenu.icon"
   >
-    <v-list>
-      <v-list-item
-        v-for="(us, i) in aboutUs"
-        :key="i"
-        data-aos="fade-in"
-        data-aos-offset="200"
-        data-aos-delay="200"
-        data-aos-duration="2000"
-      >
-        {{ us.title }}: {{ us.value }}
-      </v-list-item>
-    </v-list>
+    <div class="py-5">
+      <TopInkListTemplate :list="offices" :color="headerMenu.color" />
+    </div>
   </TopInkCard>
 </template>
