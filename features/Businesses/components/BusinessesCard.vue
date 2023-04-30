@@ -1,9 +1,11 @@
 <script setup lang="ts">
-import { NavBarMenuTextTitle } from "~~/features/Elements";
+import { TopInkCard } from "~~/features/Elements";
+import { HeaderMenu } from "~~/types/type";
 
 interface Props {
-  menuIndexNumber: number;
+  headerMenu: HeaderMenu;
 }
+
 defineProps<Props>();
 
 const businesses = [
@@ -36,13 +38,14 @@ const businesses = [
 </script>
 
 <template>
-  <div id="businesses" class="pt-10">
-    <div class="px-10 pb-4">
-      <NavBarMenuTextTitle variant="main" :menu-index-number="menuIndexNumber"
-        >事業内容
-      </NavBarMenuTextTitle>
-    </div>
-
+  <TopInkCard
+    bottom-title-width="360px"
+    position-bottom="-50px"
+    :text="headerMenu.text"
+    :title="headerMenu.title"
+    :color="headerMenu.color"
+    :icon="headerMenu.icon"
+  >
     <v-row justify="space-around" no-gutters>
       <v-col cols="10" sm="5" v-for="(business, i) in businesses" :key="i">
         <div
@@ -75,5 +78,5 @@ const businesses = [
         </div>
       </v-col>
     </v-row>
-  </div>
+  </TopInkCard>
 </template>

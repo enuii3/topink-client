@@ -1,13 +1,25 @@
 <script setup lang="ts">
 import { TopInkCard } from "~~/features/Elements";
+import { HeaderMenu } from "~~/types/type";
 
 interface Props {
-  menuIndexNumber: number;
+  headerMenu: HeaderMenu;
 }
-const props = defineProps<Props>();
+
+defineProps<Props>();
 </script>
 
 <template>
-  <TopInkCard title="私たちについて" :menu-index-number="menuIndexNumber">
+  <TopInkCard
+    bottom-title-width="320px"
+    position-bottom="-50px"
+    :text="headerMenu.text"
+    :title="headerMenu.title"
+    :color="headerMenu.color"
+    :icon="headerMenu.icon"
+  >
+    <div>私たちについて</div>
   </TopInkCard>
 </template>
+
+<style scoped></style>

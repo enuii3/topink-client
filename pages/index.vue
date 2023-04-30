@@ -6,12 +6,13 @@ import { OfficeCard } from "~/features/Office";
 import { AboutUsCard } from "~/features/AboutUs";
 import { RecruitCard } from "~/features/Recruit";
 import { ContactCard } from "~/features/Contact";
+import { headerMenus } from "~~/constants/constant";
 
 const componentCards = [
   MissionCard,
   BusinessesCard,
-  OfficeCard,
   AboutUsCard,
+  OfficeCard,
   RecruitCard,
   ContactCard,
 ];
@@ -20,11 +21,12 @@ const componentCards = [
 <template>
   <div>
     <TopCard />
+
     <component
       v-for="(card, index) in componentCards"
       :key="index"
       :is="card"
-      :menu-index-number="index"
+      :header-menu="headerMenus[index]"
     />
   </div>
 </template>
