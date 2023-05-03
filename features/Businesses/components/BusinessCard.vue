@@ -56,7 +56,7 @@ defineProps<Props>();
 
 .business-card-outline {
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   width: 100%;
   margin: 16px 0;
   border-radius: 32px;
