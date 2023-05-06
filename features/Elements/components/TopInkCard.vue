@@ -75,6 +75,12 @@ defineProps<Props>();
   font-family: "YuGothic";
 }
 
+@media screen and (max-width: 600px) {
+  .title {
+    max-width: 200px;
+  }
+}
+
 .background-text {
   z-index: auto;
   overflow: hidden;
