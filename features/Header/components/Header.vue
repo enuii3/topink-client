@@ -1,17 +1,27 @@
 <script setup lang="ts">
 import HeaderMenu from "./HeaderMenu.vue";
+
+interface Props {
+  maxWidth: string;
+}
+
+defineProps<Props>();
 </script>
 
 <template>
   <v-app-bar flat class="pa-6 pa-sm-4">
-    <v-row no-gutters justify-sm="space-around" style="max-width: 1500px">
+    <v-row
+      no-gutters
+      justify-sm="space-around"
+      :style="{ 'max-width': maxWidth }"
+    >
       <v-col
         cols="12"
         sm="3"
         class="d-flex justify-start align-center"
         style="max-width: 220px"
       >
-        <v-img src="topink-logo.png" max-width="40" />
+        <v-img src="topink-logo.png" max-width="40" aspect-ratio="16/9" />
         <h3 class="topink-logo-title">TOP INK</h3>
       </v-col>
 

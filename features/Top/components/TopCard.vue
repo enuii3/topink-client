@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <v-img src="topink-top.jpg">
+  <v-img src="topink-top.jpg" aspect-ratio="16/9">
     <div class="top-message">
       <strong style="color: white"> 『 ミライへ繋げる、まちづくり。 』 </strong>
       <!-- <strong v-for="(str, i) in 'ミライへ繋げる、まちづくり。'" :style="{ color: gradientMessageColor14[i] }" >{{ str }}</strong > -->
