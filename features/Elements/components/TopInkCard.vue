@@ -25,7 +25,7 @@ defineProps<Props>();
 <template>
   <!-- <div :id="title" class="ma-5" data-aos="fade-in" data-aos-offset="200" data-aos-delay="200" data-aos-duration="2000" style="position: static" > -->
   <div
-    class="py-10"
+    class="py-12"
     :style="{
       background: backgroundColor,
     }"

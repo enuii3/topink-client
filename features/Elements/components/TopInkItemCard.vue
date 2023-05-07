@@ -12,7 +12,7 @@ defineProps<Props>();
 
 <template>
   <v-card
-    class="business-card-outline"
+    class="card-outline"
     :style="{
       'border-width': '2px',
       'border-style': 'solid',
@@ -21,7 +21,7 @@ defineProps<Props>();
     height="228px"
   >
     <div class="my-6 mx-8">
-      <div class="business-card-title-bar">
+      <div class="card-title-bar">
         <v-icon class="pr-4" size="x-large" :color="color">{{ icon }}</v-icon>
 
         <h3
@@ -45,7 +45,7 @@ defineProps<Props>();
       </p>
     </div>
 
-    <v-img class="business-img" src="topink-top.jpg" aspect-ratio="16/9" />
+    <v-img v-if="image" class="business-img" :src="image" aspect-ratio="16/9" />
   </v-card>
 </template>
 
@@ -54,16 +54,16 @@ defineProps<Props>();
   width: 300px;
 }
 
-.business-card-outline {
+.card-outline {
   display: flex;
   justify-content: flex-start;
   width: 100%;
-  margin: 16px 0;
+  margin: 8px 0;
   border-radius: 32px;
   z-index: 1;
   position: relative;
 }
-.business-card-title-bar {
+.card-title-bar {
   display: flex;
   align-items: center;
   margin-bottom: 16px;
