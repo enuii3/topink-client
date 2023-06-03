@@ -29,7 +29,7 @@ defineProps<Props>();
               style="min-height: 50px"
             >
               <h4 class="d-flex justify-center">株式会社TOP INK</h4>
-              <p class="copy-right">© 2023 TOP INK inc.</p>
+              <p class="copy-right">© TOP INK inc.</p>
             </div>
           </div>
         </v-col>
