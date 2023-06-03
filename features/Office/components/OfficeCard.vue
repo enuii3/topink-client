@@ -20,8 +20,6 @@ const offices = [
     label: "支店",
     value: "静岡県 浜松市 南区 楊子町 199-4 Leylandy village D号室",
   },
-  { label: "設立年月日", value: "2023年 4月" },
-  { label: "資本金", value: "50万" },
 ];
 </script>
 
