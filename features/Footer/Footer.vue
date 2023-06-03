@@ -16,10 +16,10 @@ defineProps<Props>();
     <div style="width: 100%; height: 100%" :style="{ 'max-width': maxWidth }">
       <v-row no-gutters justify="center" style="height: 100%">
         <v-col cols="6" class="d-flex justify-center align-center">
-          <div class="footer-left-inline-box">
+          <div class="footer-left-inline-box flex-grow-1">
             <v-img
-              max-height="80"
-              src="topink-logo.png"
+              height="100"
+              src="topink-new-logoy.png"
               alt="footer-logo"
               aspect-ratio="16/9"
             />
@@ -28,7 +28,7 @@ defineProps<Props>();
               class="d-flex flex-column justify-space-between"
               style="min-height: 50px"
             >
-              <h4 class="d-flex justify-center">株式会社TOP INK</h4>
+              <!-- <h4 class="d-flex justify-center">株式会社TOP INK</h4> -->
               <p class="copy-right">© TOP INK inc.</p>
             </div>
           </div>
@@ -82,5 +82,6 @@ footer {
   justify-content: center;
   background-color: grey;
   font-size: 12px;
+  margin-top: 10px;
 }
 </style>
