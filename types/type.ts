@@ -1,3 +1,11 @@
+export type Staff = {
+  name: string;
+  image: string;
+  directorJob: string;
+  directorOffice: string;
+  message: string;
+};
+
 export type HeaderMenuTitle =
   | "mission"
   | "businesses"
