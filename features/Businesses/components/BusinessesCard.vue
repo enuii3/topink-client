@@ -57,7 +57,7 @@ const businesses = [
     :color="headerMenu.color"
     :icon="headerMenu.icon"
   >
-    <v-row class="mt-4" justify="space-between" no-gutters>
+    <v-row justify="space-between" no-gutters>
       <v-col
         v-for="(business, index) in businesses"
         :key="index"
