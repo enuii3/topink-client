@@ -10,13 +10,16 @@ defineProps<Props>();
 </script>
 
 <template>
-  <div class="outline pa-1 pa-sm-6" style="z-index: 1">
+  <div class="outline pa-3 pa-sm-6" style="z-index: 1">
+    <!-- <div class="img-layout"> -->
     <v-img
       class="staff-img"
       :src="staff.image"
       :alt="staff.name"
-      aspect-ratio="16/9"
+      width="300"
+      height="300"
     />
+    <!-- </div> -->
 
     <div class="card-value">
       <div
@@ -26,9 +29,9 @@ defineProps<Props>();
           'border-bottom-color': 'white',
         }"
         data-aos="fade-in"
-        data-aos-offset="200"
-        data-aos-delay="200"
-        data-aos-duration="2000"
+        data-aos-offset="150"
+        data-aos-delay="150"
+        data-aos-duration="1500"
       >
         <h1 class="name">{{ staff.name }}</h1>
         <h3 class="director job">{{ staff.directorJob }}</h3>
@@ -39,9 +42,9 @@ defineProps<Props>();
         <span
           class="message"
           data-aos="fade-in"
-          data-aos-offset="300"
-          data-aos-delay="300"
-          data-aos-duration="3000"
+          data-aos-offset="200"
+          data-aos-delay="200"
+          data-aos-duration="2000"
           >{{ staff.message }}</span
         >
       </div>
@@ -55,7 +58,7 @@ defineProps<Props>();
 }
 
 .card-value {
-  padding: 200px 10px 10px 10px;
+  padding: 20px 10px 10px 10px;
 }
 .outline {
   position: relative;
@@ -65,10 +68,9 @@ defineProps<Props>();
 }
 
 .staff-img {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  opacity: 0.3;
+  display: flex;
+  justify-content: center;
+  opacity: 0.7;
 }
 
 .director {
@@ -99,6 +101,17 @@ defineProps<Props>();
 @media screen and (max-width: 600px) {
   .office {
     display: none;
+  }
+}
+
+@media screen and (min-width: 601px) {
+  .staff-img {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  .card-value {
+    padding-top: 200px;
   }
 }
 </style>
