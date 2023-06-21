@@ -11,10 +11,18 @@ defineProps<Props>();
 const offices = [
   { label: "会社名", value: "株式会社TOP INK" },
   { label: "代表取締役", value: "田島 憲人" },
-  { label: "郵便番号", value: "430-0855" },
+  { label: "郵便番号", value: "302-0034" },
   {
     label: "本社",
-    value: "静岡県 浜松市 南区 楊子町 199-4 Leylandy village D号室",
+    value: "茨城県 取手市 戸頭 1676-1",
+  },
+  {
+    label: "電話番号",
+    value: "050-8890-1447",
+  },
+  {
+    label: "FAX",
+    value: "050-8890-1448",
   },
   {
     label: "支店",

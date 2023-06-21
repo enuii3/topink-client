@@ -20,7 +20,7 @@ defineProps<Props>();
     }"
     height="228px"
   >
-    <div class="my-6 mx-8">
+    <div class="py-4 px-4">
       <div class="business-card-title-bar">
         <v-icon class="pr-4" size="x-large" :color="color">{{ icon }}</v-icon>
 
@@ -58,7 +58,6 @@ defineProps<Props>();
   display: flex;
   justify-content: start;
   width: 100%;
-  margin: 16px 0;
   border-radius: 32px;
   z-index: 1;
   position: relative;
@@ -66,7 +65,6 @@ defineProps<Props>();
 .business-card-title-bar {
   display: flex;
   align-items: center;
-  margin-bottom: 16px;
 }
 
 p {
