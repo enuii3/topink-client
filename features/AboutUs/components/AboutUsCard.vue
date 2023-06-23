@@ -13,7 +13,7 @@ defineProps<Props>();
 const staffList: Staff[] = [
   {
     name: "田島 憲人",
-    image: "default.png",
+    image: "tajima-kento.jpg",
     directorJob: "代表取締役 ",
     directorOffice: "本社支店",
     message:
