@@ -5,12 +5,21 @@ import { headerMenus } from "~/constants/constant";
 const topHeaderMenus = headerMenus.slice(0, 3);
 const bottomHeaderMenus = headerMenus.slice(-3);
 
-const scrollTo = (index: number) => {
-  window.scrollTo({
-    top: 500 * (index + 1),
-    behavior: "smooth",
-  });
-};
+// const scrollTo = (index: number) => {
+//   window.scrollTo({
+//     top: 500 * (index + 1),
+//     behavior: "smooth",
+//   });
+// };
+const scrollList = [
+  "#mission",
+  "#business",
+  "#business",
+  "#business",
+  "#aboutUs",
+  "#office",
+  "#contact",
+];
 </script>
 
 <template>
@@ -26,9 +35,10 @@ const scrollTo = (index: number) => {
         width="84px"
         :key="index"
         :color="menu.color"
-        @click="scrollTo(index)"
       >
+        <!-- <NuxtLink :to="scrollList[index]"> -->
         <p class="navbar-menu-title">{{ menu.text }}</p>
+        <!-- </NuxtLink> -->
       </NavBarMenuTextTitle>
     </v-col>
 
@@ -45,7 +55,9 @@ const scrollTo = (index: number) => {
         :color="menu.color"
         @click="scrollTo(index)"
       >
+        <!-- <NuxtLink :to="scrollList[index]"> -->
         <p class="navbar-menu-title">{{ menu.text }}</p>
+        <!-- </NuxtLink> -->
       </NavBarMenuTextTitle>
     </v-col>
   </v-row>
