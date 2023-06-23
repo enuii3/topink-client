@@ -24,10 +24,6 @@ const offices = [
     label: "FAX",
     value: "050-8890-1448",
   },
-  {
-    label: "支店",
-    value: "静岡県 浜松市 南区 楊子町 199-4 Leylandy village D号室",
-  },
 ];
 </script>
 
