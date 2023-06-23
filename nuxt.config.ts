@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
   app: {
     head: {
-      title: "Top ink",
+      title: "TOP INK",
     },
   },
   imports: {

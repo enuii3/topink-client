@@ -17,17 +17,21 @@ interface Props extends HeaderMenu {
   bottomTitleWidth: string;
   bottomTitleOpacity?: string;
   backgroundColor?: string;
+  paddingBottom?: string;
 }
 
-defineProps<Props>();
+withDefaults(defineProps<Props>(), {
+  paddingBottom: "48px",
+});
 </script>
 
 <template>
   <!-- <div :id="title" class="ma-5" data-aos="fade-in" data-aos-offset="200" data-aos-delay="200" data-aos-duration="2000" style="position: static" > -->
   <div
-    class="py-12"
     :style="{
       background: backgroundColor,
+      'padding-top': '48px',
+      'padding-bottom': paddingBottom,
     }"
   >
     <div style="position: relative">

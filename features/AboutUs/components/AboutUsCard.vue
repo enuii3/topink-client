@@ -13,7 +13,7 @@ defineProps<Props>();
 const staffList: Staff[] = [
   {
     name: "田島 憲人",
-    image: "default.png",
+    image: "tajima-kento.jpg",
     directorJob: "代表取締役 ",
     directorOffice: "本社支店",
     message:
@@ -32,9 +32,10 @@ const staffList: Staff[] = [
 
 <template>
   <TopInkCard
-    position-bottom="-50px"
+    position-bottom="-110px"
     bottom-title-width="320px"
     background-color="rgba(209, 220, 240)"
+    paddingBottom="100px"
     :text="headerMenu.text"
     :title="headerMenu.title"
     :color="headerMenu.color"
