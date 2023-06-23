@@ -21,10 +21,10 @@ interface ContactForm {
 defineProps<Props>();
 
 const contactFormLabel = [
-  { title: "officeName", text: "会社名" },
-  { title: "ceo", text: "代表取締役" },
-  { title: "postOffice", text: "郵便番号" },
-  { title: "address", text: "所在地" },
+  // { title: "officeName", text: "会社名" },
+  // { title: "ceo", text: "代表取締役" },
+  // { title: "postOffice", text: "郵便番号" },
+  // { title: "address", text: "所在地" },
   { title: "fullName", text: "お名前" },
   { title: "phoneNumber", text: "電話番号" },
   { title: "email", text: "メールアドレス" },
