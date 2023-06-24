@@ -14,35 +14,35 @@ const businesses = [
     title: "リフォーム事業",
     description:
       "お客様のご要望に合わせたプランをご提案し、お客様が理想とする住まいを実現するお手伝いをしています。住宅のリフォームは、お客様のライフスタイルやライフイベントに合わせて変化していくものです。",
-    image: "topink-top.jpg",
+    image: "rehome.jpeg",
   },
   {
     icon: "mdi-wall",
     title: "補償サービス事業",
     description:
       "製品やサービスの質に自信を持っており、万が一のトラブルや不具合に対しても迅速かつ適切に対応致します。補償サービスにより、お客様は安心して製品をご利用いただけます。",
-    image: "topink-top.jpg",
+    image: "compensation.jpeg",
   },
   {
     icon: "mdi-compost",
     title: "省エネ・住宅設備事業",
     description:
       "環境に配慮した省エネルギーソリューションを提供し、お客様の暮らしを快適かつ持続可能なものに致します。エネルギー効率の高い設備の導入や断熱材の施工など、さまざまな取り組みを通じて、住宅の省エネ化を実現しています。",
-    image: "topink-top.jpg",
+    image: "housing-equipment.jpeg",
   },
   {
     icon: "mdi-poll",
     title: "SNSマーケティング",
     description:
       "Facebook、Instagram、Twitter、LinkedInなどの主要なソーシャルメディアプラットフォームを活用して、クライアントのビジネスの知名度を高め、ブランドを強化し、収益を増やすことをサポートします。",
-    image: "topink-top.jpg",
+    image: "sns-marketing.jpg",
   },
   {
     icon: "mdi-movie-filter",
     title: "動画プロモーション事業",
     description:
       "映像制作に特化したプロフェッショナルチームを擁しており、企業のブランディングや商品の販促に最適な動画を制作しています。 企画・撮影・編集までの全ての工程を一貫して自社で行うことで高品質かつスピーディーに対応します。",
-    image: "topink-top.jpg",
+    image: "movie-promotion.jpeg",
   },
 ];
 </script>

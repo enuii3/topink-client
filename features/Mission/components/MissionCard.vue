@@ -7,6 +7,17 @@ interface Props {
 }
 
 defineProps<Props>();
+
+useHead({
+  title: "株式会社TOP INK",
+  meta: [
+    {
+      name: "description",
+      content:
+        "株式会社TOP INKは、お客様の暮らしを豊かにするために、常にお客様目線で考え、最高品質の商品とサービスを提供します。地球環境にも配慮し、社会貢献にも努め、持続可能な社会の実現に貢献します。",
+    },
+  ],
+});
 </script>
 
 <template>
@@ -20,9 +31,10 @@ defineProps<Props>();
     :icon="headerMenu.icon"
   >
     <div class="message-outline">
-      <p class="message pa-5 pa-sm-9 pa-md-12 pa-lg-16">
-        私たちは、お客様の暮らしを豊かにするために、常にお客様目線で考え、最高品質の商品とサービスを提供します。<br />地球環境にも配慮し、社会貢献にも努め、持続可能な社会の実現に貢献します。<br />私たちの事業を通じて、お客様と地域社会の発展に貢献することを使命としています。
-      </p>
+      <h4 class="message pa-5 pa-sm-9 pa-md-12 pa-lg-16">
+        株式会社TOP
+        INKは、お客様の暮らしを豊かにするために、常にお客様目線で考え、最高品質の商品とサービスを提供します。<br />地球環境にも配慮し、社会貢献にも努め、持続可能な社会の実現に貢献します。<br />私たちの事業を通じて、お客様と地域社会の発展に貢献することを使命としています。
+      </h4>
     </div>
   </TopInkCard>
 </template>

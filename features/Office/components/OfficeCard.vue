@@ -8,6 +8,16 @@ interface Props {
 }
 defineProps<Props>();
 
+useHead({
+  title: "株式会社TOP INK",
+  meta: [
+    {
+      name: "description",
+      content: "株式会社TOP INK 会社情報",
+    },
+  ],
+});
+
 const offices = [
   { label: "会社名", value: "株式会社TOP INK" },
   { label: "代表取締役", value: "田島 憲人" },

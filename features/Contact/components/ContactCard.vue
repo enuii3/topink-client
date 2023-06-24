@@ -20,6 +20,16 @@ interface ContactForm {
 
 defineProps<Props>();
 
+useHead({
+  title: "株式会社TOP INK",
+  meta: [
+    {
+      name: "description",
+      content: "株式会社TOP INK お問合せ",
+    },
+  ],
+});
+
 const contactFormLabel = [
   // { title: "officeName", text: "会社名" },
   // { title: "ceo", text: "代表取締役" },

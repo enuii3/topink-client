@@ -13,9 +13,9 @@ defineProps<Props>();
     :key="index"
     class="d-flex align-center"
     data-aos="fade-in"
-    data-aos-offset="200"
-    data-aos-delay="200"
-    data-aos-duration="2000"
+    data-aos-offset="100"
+    data-aos-delay="100"
+    data-aos-duration="1000"
   >
     <v-col cols="4" class="d-flex justify-center"
       ><v-chip label :color="color" style="width: 100px">
@@ -25,7 +25,7 @@ defineProps<Props>();
       </v-chip></v-col
     >
     <v-col cols="8">
-      <div>{{ obj.value }}</div></v-col
+      <strong>{{ obj.value }}</strong></v-col
     >
   </v-row>
 </template>

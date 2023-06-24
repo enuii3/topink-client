@@ -34,7 +34,7 @@ defineProps<Props>();
         data-aos-duration="1500"
       >
         <h1 class="name">{{ staff.name }}</h1>
-        <h3 class="director job">{{ staff.directorJob }}</h3>
+        <h2 class="director job">{{ staff.directorJob }}</h2>
         <h3 class="director office">{{ staff.directorOffice }}</h3>
       </div>
 
@@ -42,9 +42,9 @@ defineProps<Props>();
         <span
           class="message"
           data-aos="fade-in"
-          data-aos-offset="200"
-          data-aos-delay="200"
-          data-aos-duration="2000"
+          data-aos-offset="160"
+          data-aos-delay="160"
+          data-aos-duration="1600"
           >{{ staff.message }}</span
         >
       </div>

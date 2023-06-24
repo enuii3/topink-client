@@ -45,7 +45,13 @@ defineProps<Props>();
       </p>
     </div>
 
-    <v-img v-if="image" class="business-img" :src="image" aspect-ratio="16/9" />
+    <v-img
+      v-if="image"
+      class="business-img"
+      :alt="title"
+      :src="image"
+      aspect-ratio="16/9"
+    />
   </v-card>
 </template>
 
@@ -99,6 +105,6 @@ p {
 
   bottom: 20px;
   right: 20px;
-  opacity: 0.2;
+  opacity: 0.4;
 }
 </style>

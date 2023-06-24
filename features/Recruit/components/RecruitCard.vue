@@ -8,6 +8,16 @@ interface Props {
 
 defineProps<Props>();
 
+useHead({
+  title: "株式会社TOP INK",
+  meta: [
+    {
+      name: "description",
+      content: "株式会社TOP INK 採用情報",
+    },
+  ],
+});
+
 const recruitList = [
   {
     icon: "mdi-home",
