@@ -57,7 +57,7 @@ defineProps<Props>();
 
 <style lang="scss" scoped>
 .v-img {
-  width: 300px;
+  width: 250px;
 }
 
 .card-outline {
