@@ -42,7 +42,14 @@ const staffList: Staff[] = [
     :icon="headerMenu.icon"
   >
     <div v-for="(staff, index) in staffList" :key="index">
-      <StaffCard :color="headerMenu.color" :staff="staff" />
+      <StaffCard
+        :color="headerMenu.color"
+        :staff="staff"
+        :data-aos="fadeStyle(index + 1)"
+        data-aos-offset="200"
+        data-aos-delay="200"
+        data-aos-duration="2000"
+      />
     </div>
   </TopInkCard>
 </template>

@@ -26,7 +26,7 @@ export const headerMenus: HeaderMenu[] = [
     color: topInkColors[0],
   },
   {
-    title: "businesses",
+    title: "business",
     text: "事業紹介",
     icon: topInkCardIcon[1],
     color: topInkColors[1],

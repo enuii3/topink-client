@@ -72,6 +72,7 @@ const businesses = [
           data-aos-duration="1000"
         >
           <TopInkItemCard
+            :index="index"
             :icon="business.icon"
             :title="business.title"
             :description="business.description"

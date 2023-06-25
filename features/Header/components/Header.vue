@@ -1,20 +1,10 @@
 <script setup lang="ts">
 import HeaderMenu from "./HeaderMenu.vue";
-
-interface Props {
-  maxWidth: string;
-}
-
-defineProps<Props>();
 </script>
 
 <template>
   <v-app-bar flat class="pa-6 pa-sm-4">
-    <v-row
-      no-gutters
-      justify-sm="space-around"
-      :style="{ 'max-width': maxWidth }"
-    >
+    <v-row no-gutters justify-sm="space-around">
       <v-col
         cols="12"
         sm="3"
