@@ -1,5 +1,6 @@
 <script setup lang="ts">
 interface Props {
+  index: number;
   icon: string;
   title: string;
   color: string;
@@ -7,7 +8,7 @@ interface Props {
   image?: string;
 }
 
-defineProps<Props>();
+const props = defineProps<Props>();
 </script>
 
 <template>
@@ -19,6 +20,10 @@ defineProps<Props>();
       'border-color': color,
     }"
     height="228px"
+    :data-aos="fadeStyle(index + 1)"
+    data-aos-offset="190"
+    data-aos-delay="190"
+    data-aos-duration="1900"
   >
     <div class="my-6 mx-8">
       <div class="card-title-bar">
@@ -27,9 +32,9 @@ defineProps<Props>();
         <h3
           style="letter-spacing: 2px"
           data-aos="fade-in"
-          data-aos-offset="200"
-          data-aos-delay="200"
-          data-aos-duration="2000"
+          data-aos-offset="270"
+          data-aos-delay="270"
+          data-aos-duration="2700"
         >
           {{ title }}
         </h3>
@@ -37,9 +42,9 @@ defineProps<Props>();
 
       <p
         data-aos="fade-in"
-        data-aos-offset="300"
-        data-aos-delay="300"
-        data-aos-duration="3000"
+        data-aos-offset="290"
+        data-aos-delay="290"
+        data-aos-duration="2900"
       >
         {{ description }}
       </p>

@@ -8,14 +8,14 @@ export type Staff = {
 
 export type HeaderMenuTitle =
   | "mission"
-  | "businesses"
+  | "business"
   | "aboutUs"
   | "office"
   | "recruit"
   | "contact";
 
 export type HeaderMenuText =
-  | "ミッション"
+  | "あなたの人生を、もっと彩る。"
   | "事業紹介"
   | "私たち"
   | "会社情報"

@@ -65,6 +65,7 @@ const recruitList = [
           data-aos-duration="1000"
         >
           <TopInkItemCard
+            :index="index"
             :icon="recruit.icon"
             :title="recruit.title"
             :description="recruit.description"

@@ -1,11 +1,5 @@
 <script setup lang="ts">
 import { headerMenus } from "~/constants/constant";
-
-interface Props {
-  maxWidth: string;
-}
-
-defineProps<Props>();
 </script>
 
 <template>
@@ -13,7 +7,7 @@ defineProps<Props>();
     class="d-flex flex-column pa-8"
     style="width: 100%; min-height: 400px"
   >
-    <div style="width: 100%; height: 100%" :style="{ 'max-width': maxWidth }">
+    <div style="width: 100%; height: 100%">
       <v-row no-gutters justify="center" style="height: 100%">
         <v-col cols="6" class="d-flex justify-center align-center">
           <div class="footer-left-inline-box flex-grow-1">
