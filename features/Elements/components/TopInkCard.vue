@@ -28,6 +28,7 @@ withDefaults(defineProps<Props>(), {
 <template>
   <!-- <div :id="title" class="ma-5" data-aos="fade-in" data-aos-offset="200" data-aos-delay="200" data-aos-duration="2000" style="position: static" > -->
   <div
+    class="topink-card"
     :style="{
       background: backgroundColor,
       'padding-top': '48px',
@@ -63,6 +64,10 @@ withDefaults(defineProps<Props>(), {
 </template>
 
 <style lang="scss" scoped>
+.topink-card {
+  border-radius: 15px;
+  overflow: hidden;
+}
 .title-bar {
   display: flex;
   justify-content: flex-start;

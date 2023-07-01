@@ -10,7 +10,7 @@ const mainMaxWidth = "1200px";
   <v-app :max-width="headerMaxWidth">
     <Header />
     <v-main class="vmain">
-      <v-card :style="{ 'max-width': mainMaxWidth }">
+      <v-card flat :style="{ 'max-width': mainMaxWidth }">
         <slot />
       </v-card>
     </v-main>
