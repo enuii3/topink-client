@@ -22,6 +22,7 @@ useHead({
 
 <template>
   <TopInkCard
+    id="#mission"
     text="あなたの人生を、もっと彩る。"
     bottom-title-width="310px"
     bottom-title-opacity="0.2"

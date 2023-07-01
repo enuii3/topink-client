@@ -49,6 +49,7 @@ const businesses = [
 
 <template>
   <TopInkCard
+    id="#businesses"
     bottom-title-width="360px"
     position-bottom="-60px"
     background-color="rgba(255,128,0,0.2)"

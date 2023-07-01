@@ -20,7 +20,9 @@ const bottomHeaderMenus = headerMenus.slice(-3);
         :key="index"
         :color="menu.color"
       >
-        <p class="navbar-menu-title">{{ menu.text }}</p>
+        <span class="navbar-menu-title" @click="scrollTo(menu.title)">{{
+          menu.text
+        }}</span>
       </NavBarMenuTextTitle>
     </v-col>
 
@@ -35,9 +37,10 @@ const bottomHeaderMenus = headerMenus.slice(-3);
         width="84px"
         :key="index"
         :color="menu.color"
-        @click="scrollTo(index)"
       >
-        <p class="navbar-menu-title">{{ menu.text }}</p>
+        <span class="navbar-menu-title" @click="scrollTo(menu.title)">{{
+          menu.text
+        }}</span>
       </NavBarMenuTextTitle>
     </v-col>
   </v-row>
@@ -45,7 +48,9 @@ const bottomHeaderMenus = headerMenus.slice(-3);
 
 <style scoped>
 .navbar-menu-title {
+  flex-shrink: 0;
   font-size: 12px;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 600px) {
