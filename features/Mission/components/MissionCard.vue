@@ -22,6 +22,7 @@ useHead({
 
 <template>
   <TopInkCard
+    id="#mission"
     text="あなたの人生を、もっと彩る。"
     bottom-title-width="310px"
     bottom-title-opacity="0.2"
@@ -65,6 +66,7 @@ useHead({
   font-size: 12px;
   display: flex;
   align-items: center;
+  line-height: 30px;
 
   color: #373737;
 }

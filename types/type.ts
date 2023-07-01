@@ -16,6 +16,7 @@ export type HeaderMenuTitle =
 
 export type HeaderMenuText =
   | "あなたの人生を、もっと彩る。"
+  | "ミッション"
   | "事業紹介"
   | "私たち"
   | "会社情報"

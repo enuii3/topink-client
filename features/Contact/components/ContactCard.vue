@@ -87,7 +87,7 @@ const errorMessage = (message: string | globalThis.Ref<string>) => {
     :color="headerMenu.color"
     :icon="headerMenu.icon"
   >
-    <div class="my-10">
+    <div id="#contact" class="my-10">
       <v-row
         v-for="(formLabel, index) in contactFormLabel"
         :key="index"

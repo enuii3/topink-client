@@ -32,6 +32,7 @@ const staffList: Staff[] = [
 
 <template>
   <TopInkCard
+    id="#aboutUs"
     position-bottom="-110px"
     bottom-title-width="320px"
     background-color="rgba(209, 220, 240)"

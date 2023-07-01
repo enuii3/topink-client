@@ -22,7 +22,7 @@ const componentCards = [
   <div>
     <TopCard />
 
-    <div v-for="(card, index) in componentCards" class="py-2">
+    <div v-for="(card, index) in componentCards" class="pa-2">
       <component :key="index" :is="card" :header-menu="headerMenus[index]" />
     </div>
   </div>

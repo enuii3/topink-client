@@ -39,6 +39,7 @@ const offices = [
 
 <template>
   <TopInkCard
+    id="#office"
     position-bottom="-50px"
     bottom-title-width="220px"
     bottom-title-opacity="0.2"

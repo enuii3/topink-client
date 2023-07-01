@@ -42,6 +42,7 @@ const recruitList = [
 
 <template>
   <TopInkCard
+    id="#recruit"
     position-bottom="-60px"
     bottom-title-width="300px"
     background-color="rgba(252, 154, 154)"

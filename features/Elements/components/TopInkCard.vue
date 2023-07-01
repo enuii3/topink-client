@@ -31,7 +31,7 @@ withDefaults(defineProps<Props>(), {
     class="topink-card"
     :style="{
       background: backgroundColor,
-      'padding-top': '48px',
+      'padding-top': '28px',
       'padding-bottom': paddingBottom,
     }"
   >
