@@ -58,7 +58,7 @@ defineProps<Props>();
 }
 
 .card-value {
-  padding: 20px 10px 10px 10px;
+  padding: 10px 0;
 }
 .outline {
   position: relative;
@@ -74,7 +74,7 @@ defineProps<Props>();
 }
 
 .director {
-  margin-left: 20px;
+  margin-left: 15px;
 }
 
 .message-box {
@@ -91,6 +91,7 @@ defineProps<Props>();
   font-size: 12px;
   display: flex;
   align-items: center;
+  padding: 0 10px;
 
   color: #373737;
 }
