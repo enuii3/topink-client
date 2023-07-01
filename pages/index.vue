@@ -22,11 +22,8 @@ const componentCards = [
   <div>
     <TopCard />
 
-    <component
-      v-for="(card, index) in componentCards"
-      :key="index"
-      :is="card"
-      :header-menu="headerMenus[index]"
-    />
+    <div v-for="(card, index) in componentCards" class="py-2">
+      <component :key="index" :is="card" :header-menu="headerMenus[index]" />
+    </div>
   </div>
 </template>
