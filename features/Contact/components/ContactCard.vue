@@ -3,19 +3,11 @@ import { useVuelidate } from "@vuelidate/core";
 import { TopInkCard } from "~~/features/Elements";
 import { HeaderMenu } from "~~/types/type";
 import { required, email, numeric, helpers } from "@vuelidate/validators";
+import { ContactFormKeys } from "../constant";
+import { ContactForm } from "../types";
 
 interface Props {
   headerMenu: HeaderMenu;
-}
-
-interface ContactForm {
-  officeName: string;
-  ceo: string;
-  postOffice: string;
-  address: string;
-  fullName: string;
-  phoneNumber: string;
-  email: string;
 }
 
 defineProps<Props>();
@@ -31,53 +23,57 @@ useHead({
 });
 
 const contactFormLabel = [
-  // { title: "officeName", text: "会社名" },
-  // { title: "ceo", text: "代表取締役" },
-  // { title: "postOffice", text: "郵便番号" },
-  // { title: "address", text: "所在地" },
-  { title: "fullName", text: "お名前" },
-  { title: "phoneNumber", text: "電話番号" },
-  { title: "email", text: "メールアドレス" },
+  { title: ContactFormKeys.fullName, text: "お名前" },
+  { title: ContactFormKeys.phoneNumber, text: "電話番号" },
+  { title: ContactFormKeys.email, text: "メールアドレス" },
+  { title: ContactFormKeys.emailTitle, text: "件名" },
+  { title: ContactFormKeys.emailBody, text: "本文" },
 ];
 
 const state = reactive<ContactForm>({
-  officeName: "",
-  ceo: "",
-  postOffice: "",
-  address: "",
-  fullName: "",
-  phoneNumber: "",
-  email: "",
+  [ContactFormKeys.fullName]: "",
+  [ContactFormKeys.phoneNumber]: "",
+  [ContactFormKeys.email]: "",
+  [ContactFormKeys.emailTitle]: "",
+  [ContactFormKeys.emailBody]: "",
 });
 
 const rules = {
-  officeName: {},
-  ceo: {},
-  postOffice: {},
-  address: {},
-  fullName: {
+  [ContactFormKeys.fullName]: {
     required: helpers.withMessage("お名前の入力が必要です。", required),
   },
-  phoneNumber: {
+  [ContactFormKeys.phoneNumber]: {
     numeric: helpers.withMessage(
       "ハイフンなしの数字で入力してください",
       numeric
     ),
     required: helpers.withMessage("電話番号の入力が必要です。", required),
   },
-  email: {
+  [ContactFormKeys.email]: {
     email: helpers.withMessage("メールアドレスが不正です。", email),
     required: helpers.withMessage("メールアドレスの入力が必要です。", required),
+  },
+  [ContactFormKeys.emailTitle]: {
+    required: helpers.withMessage("件名の入力が必要です。", required),
+  },
+  [ContactFormKeys.emailBody]: {
+    required: helpers.withMessage("本文の入力が必要です。", required),
   },
 };
 
 const validator = useVuelidate(rules, state);
-const isRequired = (title: string) => {
+const isRequired = (
+  title: (typeof ContactFormKeys)[keyof typeof ContactFormKeys]
+) => {
   if (Object.keys(validator.value[title]).includes("required")) return true;
 };
 
 const submit = async () => {
   await validator.value.$validate();
+};
+
+const errorMessage = (message: string | globalThis.Ref<string>) => {
+  return message as string;
 };
 </script>
 
@@ -97,7 +93,7 @@ const submit = async () => {
         :key="index"
         class="d-flex justify-center"
       >
-        <v-col cols="4" class="form-label-col">
+        <v-col cols="4" class="form label-col">
           <div class="d-flex align-center" style="height: 40px">
             <v-chip
               label
@@ -107,6 +103,7 @@ const submit = async () => {
               <span style="margin: 0 auto; font-size: 11px">
                 {{ formLabel.text }}
               </span>
+
               <v-icon v-if="isRequired(formLabel.title)" size="sm" color="red"
                 >mdi-alert-circle-outline</v-icon
               >
@@ -114,11 +111,26 @@ const submit = async () => {
           </div>
         </v-col>
 
-        <v-col cols="7" class="form-value-col">
-          <v-text-field
+        <v-col cols="7" class="form value-col">
+          <v-textarea
+            v-if="formLabel.title === ContactFormKeys.emailBody"
             v-model="validator[formLabel.title].$model"
-            :error="validator[formLabel.title].$errors[0]"
-            :error-messages="validator[formLabel.title].$errors[0]?.$message"
+            :error="validator[formLabel.title].$errors[0] ? true : false"
+            :error-messages="
+              errorMessage(validator[formLabel.title].$errors[0]?.$message)
+            "
+            style="z-index: 1"
+            variant="outlined"
+            density="compact"
+            :label="formLabel.text"
+          />
+          <v-text-field
+            v-else
+            v-model="validator[formLabel.title].$model"
+            :error="validator[formLabel.title].$errors[0] ? true : false"
+            :error-messages="
+              errorMessage(validator[formLabel.title].$errors[0]?.$message)
+            "
             style="z-index: 1"
             variant="outlined"
             density="compact"
@@ -126,6 +138,7 @@ const submit = async () => {
           />
         </v-col>
       </v-row>
+
       <div class="d-flex justify-center pt-4">
         <v-btn
           :color="headerMenu.color"
@@ -138,17 +151,17 @@ const submit = async () => {
   </TopInkCard>
 </template>
 
-<style scoped>
-.form-label-col {
+<style lang="scss" scoped>
+.form {
   display: flex;
-  align-items: flex-start;
-  justify-content: center;
   padding-top: 0;
-}
-.form-value-col {
-  display: flex;
-  align-items: center;
-  padding-top: 0;
-  padding-right: 0;
+  &.label-col {
+    justify-content: center;
+    align-items: flex-start;
+  }
+  &.value-col {
+    align-items: center;
+    padding-right: 0;
+  }
 }
 </style>
