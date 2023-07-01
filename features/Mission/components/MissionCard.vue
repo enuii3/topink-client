@@ -66,6 +66,7 @@ useHead({
   font-size: 12px;
   display: flex;
   align-items: center;
+  line-height: 30px;
 
   color: #373737;
 }
