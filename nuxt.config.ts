@@ -1,4 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+
 export default defineNuxtConfig({
   app: {
     head: {
@@ -9,7 +10,14 @@ export default defineNuxtConfig({
     dirs: ["features"],
   },
   build: {
-    transpile: ["vuetify"],
+    transpile: ["vuetify", "vue-toastification"],
+  },
+  runtimeConfig: {
+    public: {
+      emailjsServiceId: "",
+      emailjsTemplateId: "",
+      emailjsPublicKey: "",
+    },
   },
   plugins: [{ src: "@/plugins/aos", ssr: false, mode: "client" }],
   css: ["assets/main.scss"],
