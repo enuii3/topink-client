@@ -4,6 +4,7 @@ import { Staff } from "~~/types/type";
 interface Props {
   color: string;
   staff: Staff;
+  index: number;
 }
 
 defineProps<Props>();
@@ -18,6 +19,11 @@ defineProps<Props>();
       :alt="staff.name"
       width="300"
       height="300"
+      style="opacity: 0.8"
+      :data-aos="fadeImage(index + 1)"
+      data-aos-offset="200"
+      data-aos-delay="200"
+      data-aos-duration="2000"
     />
     <!-- </div> -->
 
@@ -28,7 +34,7 @@ defineProps<Props>();
           'border-bottom-width': '10px',
           'border-bottom-color': 'white',
         }"
-        data-aos="fade-in"
+        :data-aos="fadeString(index + 1)"
         data-aos-offset="150"
         data-aos-delay="150"
         data-aos-duration="1500"
@@ -41,7 +47,7 @@ defineProps<Props>();
       <div class="message-box pa-sm-4">
         <span
           class="message"
-          data-aos="fade-in"
+          :data-aos="fadeString(index + 1)"
           data-aos-offset="160"
           data-aos-delay="160"
           data-aos-duration="1600"
@@ -92,8 +98,6 @@ defineProps<Props>();
   display: flex;
   align-items: center;
   padding: 0 10px;
-
-  color: #373737;
 }
 .director {
   margin-left: 10px;

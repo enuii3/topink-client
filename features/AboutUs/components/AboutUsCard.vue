@@ -46,7 +46,8 @@ const staffList: Staff[] = [
       <StaffCard
         :color="headerMenu.color"
         :staff="staff"
-        :data-aos="fadeStyle(index + 1)"
+        :data-aos="fadeCard(index + 1)"
+        :index="index"
         data-aos-offset="200"
         data-aos-delay="200"
         data-aos-duration="2000"
