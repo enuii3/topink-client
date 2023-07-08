@@ -32,9 +32,9 @@ const props = defineProps<Props>();
         <h3
           style="letter-spacing: 2px"
           :data-aos="fadeString(index + 1)"
-          data-aos-offset="320"
-          data-aos-delay="320"
-          data-aos-duration="3200"
+          data-aos-offset="120"
+          data-aos-delay="120"
+          data-aos-duration="1200"
         >
           {{ title }}
         </h3>
@@ -42,9 +42,9 @@ const props = defineProps<Props>();
 
       <p
         :data-aos="fadeString(index + 1)"
-        data-aos-offset="350"
-        data-aos-delay="350"
-        data-aos-duration="3500"
+        data-aos-offset="150"
+        data-aos-delay="150"
+        data-aos-duration="1500"
       >
         {{ description }}
       </p>
@@ -58,9 +58,9 @@ const props = defineProps<Props>();
       :data-aos="fadeImage(index + 1)"
       style="opacity: 0.4"
       aspect-ratio="16/9"
-      data-aos-offset="400"
-      data-aos-delay="400"
-      data-aos-duration="4000"
+      data-aos-offset="100"
+      data-aos-delay="100"
+      data-aos-duration="1000"
     />
   </v-card>
 </template>
