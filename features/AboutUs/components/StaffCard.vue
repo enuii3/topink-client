@@ -21,9 +21,9 @@ defineProps<Props>();
       height="300"
       style="opacity: 0.8"
       :data-aos="fadeImage(index + 1)"
-      data-aos-offset="200"
-      data-aos-delay="200"
-      data-aos-duration="2000"
+      data-aos-offset="100"
+      data-aos-delay="100"
+      data-aos-duration="1000"
     />
     <!-- </div> -->
 
