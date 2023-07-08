@@ -20,7 +20,7 @@ const props = defineProps<Props>();
       'border-color': color,
     }"
     height="228px"
-    :data-aos="fadeStyle(index + 1)"
+    :data-aos="fadeCard(index + 1)"
     data-aos-offset="190"
     data-aos-delay="190"
     data-aos-duration="1900"
@@ -31,20 +31,20 @@ const props = defineProps<Props>();
 
         <h3
           style="letter-spacing: 2px"
-          data-aos="fade-in"
-          data-aos-offset="270"
-          data-aos-delay="270"
-          data-aos-duration="2700"
+          :data-aos="fadeString(index + 1)"
+          data-aos-offset="320"
+          data-aos-delay="320"
+          data-aos-duration="3200"
         >
           {{ title }}
         </h3>
       </div>
 
       <p
-        data-aos="fade-in"
-        data-aos-offset="290"
-        data-aos-delay="290"
-        data-aos-duration="2900"
+        :data-aos="fadeString(index + 1)"
+        data-aos-offset="350"
+        data-aos-delay="350"
+        data-aos-duration="3500"
       >
         {{ description }}
       </p>
@@ -55,7 +55,12 @@ const props = defineProps<Props>();
       class="business-img"
       :alt="title"
       :src="image"
+      :data-aos="fadeImage(index + 1)"
+      style="opacity: 0.4"
       aspect-ratio="16/9"
+      data-aos-offset="400"
+      data-aos-delay="400"
+      data-aos-duration="4000"
     />
   </v-card>
 </template>
@@ -90,8 +95,6 @@ p {
   font-size: 12px;
   display: flex;
   align-items: center;
-
-  color: #373737;
 }
 
 @media screen and (max-width: 600px) {
@@ -102,6 +105,7 @@ p {
   p {
     width: 280px;
     line-height: 20px;
+    z-index: 1;
   }
 }
 
@@ -110,6 +114,5 @@ p {
 
   bottom: 20px;
   right: 20px;
-  opacity: 0.4;
 }
 </style>
