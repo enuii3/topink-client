@@ -5,6 +5,8 @@ import { HeaderMenu } from "~~/types/type";
 import { required, email, numeric, helpers } from "@vuelidate/validators";
 import { ContactFormKeys } from "../constant";
 import { ContactForm } from "../types";
+import { useToast } from "vue-toastification";
+import emailjs from "@emailjs/browser";
 
 interface Props {
   headerMenu: HeaderMenu;
@@ -30,7 +32,15 @@ const contactFormLabel = [
   { title: ContactFormKeys.emailBody, text: "本文" },
 ];
 
-const state = reactive<ContactForm>({
+const emailjsServiceId = useRuntimeConfig().public.emailjsServiceId;
+const emailjsTemplateId = useRuntimeConfig().public.emailjsTemplateId;
+const emailjsPublicKey = useRuntimeConfig().public.emailjsPublicKey;
+
+const toast = useToast();
+
+const isLoading = ref<boolean>(false);
+
+const form = reactive<ContactForm>({
   [ContactFormKeys.fullName]: "",
   [ContactFormKeys.phoneNumber]: "",
   [ContactFormKeys.email]: "",
@@ -61,20 +71,60 @@ const rules = {
   },
 };
 
-const validator = useVuelidate(rules, state);
+const validator = useVuelidate(rules, form);
 const isRequired = (
   title: (typeof ContactFormKeys)[keyof typeof ContactFormKeys]
 ) => {
   if (Object.keys(validator.value[title]).includes("required")) return true;
 };
 
+const resetForm = () => {
+  validator.value.$reset();
+  form.FULL_NAME = "";
+  form.EMAIL = "";
+  form.EMAIL_TITLE = "";
+  form.EMAIL_BODY = "";
+  form.PHONE_NUMBER = "";
+};
+
+const sendEmail = () => {
+  const templateParams = {
+    fullName: form.FULL_NAME,
+    phoneNumber: form.PHONE_NUMBER,
+    email: form.EMAIL,
+    emailTitle: form.EMAIL_TITLE,
+    emailBody: form.EMAIL_BODY,
+  };
+
+  emailjs.send(emailjsServiceId, emailjsTemplateId, templateParams).then(
+    async function (response) {
+      resetForm();
+
+      isLoading.value = false;
+      toast.success("お問合せが完了しました。");
+    },
+    function (error) {
+      toast.error("エラーが発生しました。入力フォームをご確認下さい");
+    }
+  );
+};
+
 const submit = async () => {
-  await validator.value.$validate();
+  const res = await validator.value.$validate();
+
+  if (res) {
+    isLoading.value = true;
+    sendEmail();
+  }
 };
 
 const errorMessage = (message: string | globalThis.Ref<string>) => {
   return message as string;
 };
+
+(() => {
+  emailjs.init(emailjsPublicKey);
+})();
 </script>
 
 <template>
@@ -121,7 +171,9 @@ const errorMessage = (message: string | globalThis.Ref<string>) => {
             "
             style="z-index: 1"
             variant="outlined"
-            density="compact"
+            auto-grow
+            rows="3"
+            row-height="40"
             :label="formLabel.text"
           />
           <v-text-field
@@ -140,14 +192,15 @@ const errorMessage = (message: string | globalThis.Ref<string>) => {
       </v-row>
 
       <div class="d-flex justify-center pt-4">
-        <v-btn
-          :color="headerMenu.color"
-          style="z-index: 1"
-          @click="validator.$validate()"
+        <v-btn :color="headerMenu.color" style="z-index: 1" @click="submit()"
           >問い合わせる</v-btn
         >
       </div>
     </div>
+
+    <v-overlay v-model="isLoading" class="align-center justify-center">
+      <v-progress-circular :size="80" color="red" indeterminate />
+    </v-overlay>
   </TopInkCard>
 </template>
 
