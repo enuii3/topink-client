@@ -48,9 +48,9 @@ const staffList: Staff[] = [
         :staff="staff"
         :data-aos="fadeCard(index + 1)"
         :index="index"
-        data-aos-offset="100"
-        data-aos-delay="100"
-        data-aos-duration="1000"
+        data-aos-offset="200"
+        data-aos-delay="200"
+        data-aos-duration="2000"
       />
     </div>
   </TopInkCard>

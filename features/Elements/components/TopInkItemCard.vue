@@ -42,9 +42,9 @@ const props = defineProps<Props>();
 
       <p
         :data-aos="fadeString(index + 1)"
-        data-aos-offset="150"
-        data-aos-delay="150"
-        data-aos-duration="1500"
+        data-aos-offset="200"
+        data-aos-delay="200"
+        data-aos-duration="2000"
       >
         {{ description }}
       </p>
@@ -55,7 +55,7 @@ const props = defineProps<Props>();
       class="business-img"
       :alt="title"
       :src="image"
-      :data-aos="fadeImage(index + 1)"
+      data-aos="face-in"
       style="opacity: 0.4"
       aspect-ratio="16/9"
       data-aos-offset="100"

@@ -20,7 +20,7 @@ defineProps<Props>();
       width="300"
       height="300"
       style="opacity: 0.8"
-      :data-aos="fadeImage(index + 1)"
+      data-aos="fade-in"
       data-aos-offset="100"
       data-aos-delay="100"
       data-aos-duration="1000"
@@ -48,9 +48,9 @@ defineProps<Props>();
         <span
           class="message"
           :data-aos="fadeString(index + 1)"
-          data-aos-offset="160"
-          data-aos-delay="160"
-          data-aos-duration="1600"
+          data-aos-offset="200"
+          data-aos-delay="200"
+          data-aos-duration="2000"
           >{{ staff.message }}</span
         >
       </div>
